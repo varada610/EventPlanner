@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="edu.scu.project.eventplanner.CreateEvent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_private_event" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="35dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="Event Details:"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:textSize="25dp"
+            android:textColor="#1d299f"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameTextView"
+            android:text="Name: "
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:inputType="text|textCapWords"
+            android:ems="8"
+            android:id="@+id/nameTextEdit"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/title"
+            android:layout_toEndOf="@+id/nameTextView"
+            android:layout_toRightOf="@+id/nameTextView"
+            android:background="@drawable/border"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/locTextView"
+            android:text="Location: "
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_below="@+id/nameTextView"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:inputType="text|textCapWords"
+            android:ems="8"
+            android:id="@+id/locTextEdit"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#A4C639"
+            android:layout_below="@+id/nameTextView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/border"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTextView"
+            android:text="Date: "
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_below="@+id/locTextEdit"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:inputType="text|textCapWords"
+            android:ems="8"
+            android:id="@+id/dateTextEdit"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/locTextEdit"
+            android:layout_toEndOf="@+id/nameTextView"
+            android:layout_toRightOf="@+id/nameTextView"
+            android:textColor="#A4C639"
+            android:background="@drawable/border"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/priorityTextView"
+            android:text="Priority: "
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/dateTextEdit"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/priorityTextView"
+            android:layout_toRightOf="@+id/priorityTextView"
+            android:layout_toEndOf="@+id/priorityTextView"
+            android:id="@+id/radioGroup"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:id="@+id/radioButton2"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:id="@+id/radioButton"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HIgh"
+                android:id="@+id/radioButton3"
+                android:checked="false" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorTextView"
+            android:text="Color: "
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_below="@+id/priorityTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="71dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/colorTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup2">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pink"
+                android:id="@+id/radioButton4"
+                android:checked="true"
+                android:textColor="#db7093"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red"
+                android:id="@+id/radioButton5"
+                android:checked="false"
+                android:layout_toEndOf="@+id/radioButton4"
+                android:layout_toRightOf="@+id/radioButton4"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ff0000"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Green"
+                android:id="@+id/radioButton7"
+                android:layout_gravity="center_horizontal"
+                android:checked="false"
+                android:textColor="#0c9967"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blue"
+                android:id="@+id/radioButton6"
+                android:checked="false"
+                android:textColor="#26bdef"/>
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup2"            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Invite All Friends"
+            android:layout_toRightOf="@+id/priorityTextView"
+            android:layout_toEndOf="@+id/priorityTextView"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin" />
+
+</android.support.design.widget.CoordinatorLayout>

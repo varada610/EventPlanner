@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextView"
+        android:text="Person Name: "
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/nameTextEdit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/nameTextEdit"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:layout_marginTop="101dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/descTextEdit"
+        android:layout_alignStart="@+id/descTextEdit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskTextView"
+        android:text="Task: "
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/taskTextEdit"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/nameTextEdit"
+        android:layout_toEndOf="@+id/nameTextView"
+        android:layout_toRightOf="@+id/nameTextView"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descTextView"
+        android:text="Task Description: "
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/taskTextView"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/descTextEdit"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/taskTextEdit"
+        android:layout_toEndOf="@+id/nameTextView"
+        android:layout_toRightOf="@+id/nameTextView"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="done"
+        android:id="@+id/doneButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.04"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/nameTextView"
+        android:layout_toEndOf="@+id/nameTextView" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_add_people"
+    android:background="#e5e5ff"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="People:"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="30dp"
+        android:textColor="#1d299f"
+        android:layout_marginLeft="90dp"/>
+
+    <EditText
+        android:layout_height="30dp"
+        android:layout_width="300dp"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/peopleTextEdit"
+        android:textColor="#A4C639"
+        android:background="@drawable/border"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:text="@string/add_people"
+        android:id="@+id/addPeople"
+        android:layout_gravity="right"
+        android:layout_alignBottom="@+id/peopleTextEdit"
+        android:layout_alignRight="@+id/addedTextView"
+        android:layout_alignEnd="@+id/addedTextView" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:id="@+id/addedTextView"
+        android:text="People: and people and people and people"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:background="#b8d7ed"
+        android:maxLines = "5"
+        android:scrollbars = "vertical"
+        android:layout_weight="0.40"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/peopleTextEdit"
+        android:layout_alignStart="@+id/peopleTextEdit" />
+
+</RelativeLayout>

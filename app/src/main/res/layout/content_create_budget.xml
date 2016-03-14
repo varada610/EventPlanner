@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.angine.project_eventactivity.MainActivity"
+    tools:showIn="@layout/activity_create_budget">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Budget:"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="30dp"
+        android:textColor="#1d299f"
+        android:layout_marginLeft="90dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/budgetTextView"
+        android:text="Budget Amount: "
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dollarTextView"
+        android:text="$"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/budgetTextView"
+        android:layout_toRightOf="@+id/budgetTextView"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="110dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/budgetTextEdit"
+        android:gravity="right"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/dollarTextView"
+        android:layout_toRightOf="@+id/dollarTextView"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noPeopleTextView"
+        android:text="Number of People: "
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/budgetTextView"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/noPeopleTextEdit"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#A4C639"
+        android:layout_below="@+id/budgetTextEdit"
+        android:layout_toEndOf="@+id/noPeopleTextView"
+        android:layout_toRightOf="@+id/noPeopleTextView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="105dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareTextView"
+        android:text="Share per Person: "
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/noPeopleTextView"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dollar2TextView"
+        android:text="$"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/noPeopleTextEdit"
+        android:layout_toEndOf="@+id/budgetTextView"
+        android:layout_toRightOf="@+id/budgetTextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="110dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:inputType="text|textCapWords"
+        android:ems="8"
+        android:id="@+id/shareTextEdit"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/noPeopleTextEdit"
+        android:layout_toEndOf="@+id/dollar2TextView"
+        android:layout_toRightOf="@+id/dollar2TextView"
+        android:textColor="#A4C639"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"        android:layout_height="wrap_content"
+        android:columnCount="5"        android:rowCount="5"
+        android:layout_marginTop="300dp"        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"  android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/createEvent"        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="2"  android:layout_columnSpan="2"
+            android:src="@drawable/budget_details"
+            app:backgroundTint="#CFD8DC"
+            android:layout_marginRight="60dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/createPrivateEvent"            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="2"  android:layout_columnSpan="2"
+            android:src="@drawable/email"
+            app:backgroundTint="#CFD8DC"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Budget \nDetails"
+            android:layout_height="wrap_content" android:textColor="#000"
+            android:textSize="18sp"  android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_rowSpan="2"  android:layout_columnSpan="2"
+            android:id="@+id/event"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Notify \nPeople"
+            android:layout_height="wrap_content" android:textColor="#000"
+            android:layout_rowSpan="2"  android:layout_columnSpan="2"
+            android:textSize="18sp"/>
+    </GridLayout>
+
+
+</RelativeLayout>
+

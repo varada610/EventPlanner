@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"    android:layout_height="wrap_content"
+   >
+    <!--
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.scu.project.eventplanner.contacts"-->
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_width="wrap_content"        android:layout_height="wrap_content"
+        android:id="@+id/list_item"
+        android:layout_marginLeft="35dp"        android:layout_marginRight="35dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop ="10dp"
+        android:layout_below="@+id/name"
+        android:background="@color/themeBlue"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"/>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.scu.project.eventplanner.ManageContacts">
+    <item
+        android:id="@id/add"
+        android:orderInCategory="100"
+        android:title="add to event"
+        app:showAsAction="never" />
+
+</menu>
